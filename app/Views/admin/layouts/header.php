@@ -46,8 +46,9 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
         }
 
         .admin-layout {
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
+            overflow: hidden;
         }
 
         .sidebar {            
@@ -285,9 +286,14 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             flex: 1;
             min-width: 0;
             font-size: 0.90rem;
+            overflow-y: auto;
+            height: 100vh;
         }
 
         .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
             min-height: 56px;
             display: flex;
             align-items: center;
@@ -296,6 +302,7 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             padding: 10px 20px;
             background: #ffffff;
             border-bottom: 1px solid var(--admin-border);
+            box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
         }
 
         .topbar-sidebar-toggle {
@@ -423,7 +430,11 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
         }
 
         .page-heading-area {
+            position: sticky;
+            top: 56px;
+            z-index: 40;
             padding-bottom: 0;
+            background: var(--admin-bg);
         }
 
         .page-heading {
@@ -697,6 +708,13 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
         @media (max-width: 991.98px) {
             .admin-layout {
                 display: block;
+                height: auto;
+                overflow: visible;
+            }
+
+            .main-area {
+                height: auto;
+                overflow: visible;
             }
 
             .sidebar {
@@ -780,6 +798,10 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             }
 
             .page-heading-area {
+                position: sticky;
+                top: 56px;
+                z-index: 40;
+                background: var(--admin-bg);
                 padding-bottom: 0;
             }
 
