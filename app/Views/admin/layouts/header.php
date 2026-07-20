@@ -60,6 +60,19 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             color: #ffffff;
             padding: 20px 14px;
             transition: width .2s ease, flex-basis .2s ease, padding .2s ease;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,255,255,.15) transparent;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,.15);
+            border-radius: 4px;
         }
 
         .sidebar.is-collapsed {
@@ -287,6 +300,19 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             font-size: 0.90rem;
             overflow-y: auto;
             height: 100vh;
+            scrollbar-width: thin;
+            scrollbar-color: #d1d5db transparent;
+        }
+
+        .main-area::-webkit-scrollbar {
+            width: 5px;
+        }
+        .main-area::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .main-area::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
         }
 
         .topbar {
