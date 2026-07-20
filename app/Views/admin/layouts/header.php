@@ -666,6 +666,30 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             color: #ffffff;
         }
 
+        .panel .table thead th {
+            background: #f8fafc;
+            font-weight: 700;
+            font-size: .78rem;
+            color: #667085;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            border-bottom: 2px solid var(--admin-border);
+            padding: .55rem .75rem;
+        }
+
+        .panel .table thead th.text-end {
+            text-align: right;
+        }
+
+        .panel .section-heading {
+            font-size: .92rem;
+            font-weight: 700;
+            color: var(--admin-text);
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--admin-border);
+            margin-bottom: 14px;
+        }
+
         .mobile-menu-button {
             display: none;
         }

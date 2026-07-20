@@ -133,7 +133,7 @@
 
             <div class="col-12 col-xl-4">
                 <div class="panel p-4 h-100">
-                    <div class="fw-semibold mb-3">Ringkasan Biaya</div>
+                    <div class="section-heading mb-0">Ringkasan Biaya</div>
                     <div class="d-flex justify-content-between py-2 border-bottom">
                         <span class="text-secondary">Lama Sewa Ditagihkan</span>
                         <span id="summaryLamaSewa">0 hari</span>

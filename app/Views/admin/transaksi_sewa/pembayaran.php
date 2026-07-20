@@ -35,7 +35,7 @@
     <div class="row g-4">
         <div class="col-12 col-xl-4">
             <div class="panel p-4 h-100">
-                <div class="fw-semibold mb-3">Ringkasan Invoice</div>
+                <div class="section-heading mb-0">Ringkasan Invoice</div>
                 <div class="d-flex justify-content-between py-2 border-bottom">
                     <span class="text-secondary">Total Tagihan</span>
                     <span>Rp <?= number_format((int) $transaksi['total_tagihan'], 0, ',', '.') ?></span>
@@ -71,7 +71,7 @@
 
         <div class="col-12 col-xl-8">
             <div class="panel p-4">
-                <div class="fw-semibold mb-3">Tambah Pembayaran</div>
+                <div class="section-heading mb-0">Tambah Pembayaran</div>
                 <form action="<?= site_url('admin/transaksi-sewa/pembayaran/store/' . $transaksi['id']) ?>" method="post">
                     <?= csrf_field() ?>
                     <div class="row g-3">
@@ -105,7 +105,7 @@
 
         <div class="col-12">
             <div class="panel p-4">
-                <div class="fw-semibold mb-3">Riwayat Pembayaran</div>
+                <div class="section-heading mb-0">Riwayat Pembayaran</div>
                 <div class="table-responsive">
                     <table class="table table-hover align-middle datatable datatable-no-order">
                         <thead>

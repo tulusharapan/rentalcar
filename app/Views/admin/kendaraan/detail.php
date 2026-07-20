@@ -16,7 +16,7 @@
     <div class="row g-4">
         <div class="col-12 col-xl-4">
             <div class="panel p-4 h-100">
-                <div class="fw-semibold mb-3">Data Kendaraan</div>
+                <div class="section-heading mb-0">Data Kendaraan</div>
                 <div class="d-grid gap-3">
                     <div>
                         <div class="small text-secondary">Kode</div>
@@ -67,7 +67,7 @@
 
         <div class="col-12 col-xl-8">
             <div class="panel p-4 mb-4">
-                <div class="fw-semibold mb-3">Foto Kendaraan</div>
+                <div class="section-heading mb-0">Foto Kendaraan</div>
                 <?php if (! empty($fotoKendaraan)) : ?>
                     <div class="row g-3">
                         <?php foreach ($fotoKendaraan as $foto) : ?>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="panel p-4">
-                <div class="fw-semibold mb-3">Riwayat Transaksi Terakhir</div>
+                <div class="section-heading mb-0">Riwayat Transaksi Terakhir</div>
                 <div class="table-responsive">
                     <table class="table table-hover align-middle mb-0">
                         <thead>

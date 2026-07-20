@@ -20,7 +20,7 @@
     <div class="row g-4">
         <div class="col-12 col-xl-4">
             <div class="panel p-4 h-100">
-                <div class="fw-semibold mb-3">Ringkasan Invoice</div>
+                <div class="section-heading mb-0">Ringkasan Invoice</div>
                 <div class="d-flex justify-content-between py-2 border-bottom">
                     <span class="text-secondary">Kode Invoice</span>
                     <span class="fw-semibold"><?= esc($transaksi['kode_transaksi']) ?></span>
@@ -64,7 +64,7 @@
             <div class="panel p-4 mb-4">
                 <div class="row g-4">
                     <div class="col-12 col-lg-6">
-                        <div class="fw-semibold mb-3">Data Pelanggan</div>
+                        <div class="section-heading mb-0">Data Pelanggan</div>
                         <div class="small text-secondary">Nama</div>
                         <div class="fw-semibold mb-2"><?= esc($transaksi['nama_lengkap']) ?></div>
                         <div class="small text-secondary">Kode Pelanggan</div>
@@ -73,7 +73,7 @@
                         <div><?= esc($transaksi['no_hp'] ?? '-') ?></div>
                     </div>
                     <div class="col-12 col-lg-6">
-                        <div class="fw-semibold mb-3">Data Kendaraan</div>
+                        <div class="section-heading mb-0">Data Kendaraan</div>
                         <div class="small text-secondary">Kendaraan</div>
                         <div class="fw-semibold mb-2"><?= esc(($transaksi['jenis_kendaraan'] ?? 'Mobil') . ' - ' . $transaksi['nama_kendaraan']) ?></div>
                         <div class="small text-secondary">Plat Nomor</div>
@@ -115,7 +115,7 @@
             </div>
 
             <div class="panel p-4 mb-4">
-                <div class="fw-semibold mb-3">Layanan Tambahan</div>
+                <div class="section-heading mb-0">Layanan Tambahan</div>
                 <div class="table-responsive">
                     <table class="table table-hover align-middle mb-0">
                         <thead>
@@ -146,7 +146,7 @@
             </div>
 
             <div class="panel p-4">
-                <div class="fw-semibold mb-3">Riwayat Pembayaran</div>
+                <div class="section-heading mb-0">Riwayat Pembayaran</div>
                 <div class="table-responsive">
                     <table class="table table-hover align-middle mb-0">
                         <thead>

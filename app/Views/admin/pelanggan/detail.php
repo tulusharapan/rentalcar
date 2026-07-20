@@ -16,10 +16,10 @@
     <div class="row g-4">
         <div class="col-12 col-xl-7">
             <div class="panel p-4 h-100">
-                <div class="d-flex align-items-start justify-content-between gap-3 mb-4">
+                <div class="section-heading d-flex align-items-start justify-content-between gap-3 mb-0">
                     <div>
                         <div class="text-secondary small">Kode Pelanggan</div>
-                        <div class="h4 fw-bold mb-0"><?= esc($pelanggan['kode_pelanggan']) ?></div>
+                        <div class="h5 fw-bold mb-0"><?= esc($pelanggan['kode_pelanggan']) ?></div>
                     </div>
                     <?php if ($pelanggan['status'] === 'aktif') : ?>
                         <span class="badge text-bg-success">Aktif</span>
@@ -59,7 +59,7 @@
 
         <div class="col-12 col-xl-5">
             <div class="panel p-4 h-100">
-                <div class="fw-semibold mb-3">Dokumen & Foto</div>
+                <div class="section-heading mb-0">Dokumen & Foto</div>
                 <div class="row g-3">
                     <?php foreach (['foto' => 'Foto', 'foto_ktp' => 'Foto KTP', 'foto_sim' => 'Foto SIM'] as $field => $label) : ?>
                         <div class="col-12">
