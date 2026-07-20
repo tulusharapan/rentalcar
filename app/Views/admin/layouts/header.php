@@ -54,9 +54,8 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
         .sidebar {            
             width: 238px;
             flex: 0 0 238px;
-            min-height: 100vh;
-            position: sticky;
-            top: 0;
+            height: 100vh;
+            overflow-y: auto;
             background: var(--admin-sidebar);
             color: #ffffff;
             padding: 20px 14px;
@@ -720,7 +719,8 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             .sidebar {
                 width: 100%;
                 flex-basis: auto;
-                min-height: auto;
+                height: auto;
+                overflow: visible;
                 position: static;
                 padding: 16px;
             }
