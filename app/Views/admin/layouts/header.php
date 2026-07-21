@@ -298,6 +298,25 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             min-width: 0;
         }
 
+        .sidebar-menu-wrap {
+            flex: 1;
+            min-height: 0;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,255,255,.15) transparent;
+        }
+
+        .sidebar-menu-wrap::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar-menu-wrap::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .sidebar-menu-wrap::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,.15);
+            border-radius: 4px;
+        }
+
         .main-area {
             flex: 1;
             min-width: 0;
