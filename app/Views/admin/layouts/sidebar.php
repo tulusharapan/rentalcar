@@ -13,35 +13,6 @@ $userPhoto = session()->get('userPhoto');
 ?>
 
 <aside class="sidebar" id="appSidebar">
-    <div class="brand-box">
-        <div class="brand-logo-wrap">
-            <?php if (! empty($expandedLogo)) : ?>
-                <img src="<?= base_url('uploads/settings/' . $expandedLogo) ?>" alt="Logo <?= esc($appName) ?>" class="brand-logo brand-logo-expanded">
-            <?php else : ?>
-                <div class="brand-mark brand-logo-expanded">
-                    <?= esc(strtoupper(substr($appName, 0, 1))) ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if (! empty($collapsedLogo)) : ?>
-                <img src="<?= base_url('uploads/settings/' . $collapsedLogo) ?>" alt="Logo <?= esc($appName) ?>" class="brand-logo brand-logo-collapsed">
-            <?php else : ?>
-                <div class="brand-mark brand-logo-collapsed">
-                    <?= esc(strtoupper(substr($appName, 0, 1))) ?>
-                </div>
-            <?php endif; ?>
-
-            <div class="brand-text">
-                <div class="brand-title"><?= esc($appName) ?></div>
-                <div class="brand-subtitle">Control Panel</div>
-            </div>
-        </div>
-
-        <button class="btn btn-sm btn-light mobile-menu-button" type="button" id="sidebarToggle">
-            <i class="bi bi-list"></i>
-        </button>
-    </div>
-
     <div class="sidebar-current-user">
         <?php if (! empty($userPhoto)) : ?>
             <img src="<?= base_url('uploads/users/' . $userPhoto) ?>" alt="Foto <?= esc($userName ?? '-') ?>" class="sidebar-user-photo">
@@ -52,6 +23,9 @@ $userPhoto = session()->get('userPhoto');
             <div class="fw-semibold text-truncate"><?= esc($userName ?? '-') ?></div>
             <div class="small text-white-50 text-truncate"><?= esc($roleLabel) ?></div>
         </div>
+        <button class="btn btn-sm btn-light ms-auto mobile-menu-button d-lg-none" type="button" id="sidebarToggle">
+            <i class="bi bi-list"></i>
+        </button>
     </div>
 
     <div class="sidebar-menu-wrap" id="sidebarMenu">
