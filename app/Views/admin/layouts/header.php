@@ -55,7 +55,9 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             width: 238px;
             flex: 0 0 238px;
             height: 100vh;
-            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
             background: var(--admin-sidebar);
             color: #ffffff;
             padding: 20px 14px;
@@ -88,6 +90,7 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             gap: 12px;
             padding: 0 8px 18px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+            flex-shrink: 0;
         }
 
         .sidebar.is-collapsed .brand-box {
@@ -258,6 +261,7 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.06);
             color: #ffffff;
+            flex-shrink: 0;
         }
 
         .sidebar.is-collapsed .sidebar-current-user {

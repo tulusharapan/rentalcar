@@ -37,13 +37,16 @@
                     <?= csrf_field() ?>
 
                     <div class="d-flex align-items-center gap-3 mb-4">
-                        <?php if (! empty($user['photo'])) : ?>
-                            <img src="<?= base_url('uploads/users/' . $user['photo']) ?>" alt="Foto <?= esc($user['name']) ?>" class="preview-photo">
-                        <?php else : ?>
-                            <div class="photo-placeholder preview-placeholder">
-                                <?= esc(strtoupper(substr((string) $user['name'], 0, 1))) ?>
-                            </div>
-                        <?php endif; ?>
+                        <div class="position-relative">
+                            <?php if (! empty($user['photo'])) : ?>
+                                <img src="<?= base_url('uploads/users/' . $user['photo']) ?>" alt="Foto <?= esc($user['name']) ?>" class="preview-photo" id="currentPhoto">
+                            <?php else : ?>
+                                <div class="photo-placeholder preview-placeholder" id="currentPhoto">
+                                    <?= esc(strtoupper(substr((string) $user['name'], 0, 1))) ?>
+                                </div>
+                            <?php endif; ?>
+                            <img src="" alt="Preview" class="preview-photo d-none" id="newPhotoPreview" style="position:absolute;inset:0;">
+                        </div>
 
                         <div>
                             <div class="fw-bold"><?= esc($user['name']) ?></div>
@@ -69,6 +72,11 @@
                             <label for="photo" class="form-label fw-semibold">Ganti Foto Profil</label>
                             <input type="file" class="form-control" id="photo" name="photo" accept=".jpg,.jpeg,.png,.webp,image/*">
                             <div class="form-text">Kosongkan jika foto tidak ingin diganti. Format jpg, jpeg, png, atau webp. Maksimal 2 MB.</div>
+                            <div id="photoActions" class="d-none mt-2">
+                                <button type="button" class="btn btn-sm btn-outline-danger" id="cancelPhoto">
+                                    <i class="bi bi-x-circle me-1"></i>Batalkan Ganti Foto
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -87,3 +95,36 @@
 </section>
 
 <?= view('admin/layouts/footer') ?>
+
+<script>
+(function () {
+    const fileInput = document.getElementById('photo');
+    const preview = document.getElementById('newPhotoPreview');
+    const actions = document.getElementById('photoActions');
+    const cancelBtn = document.getElementById('cancelPhoto');
+
+    if (!fileInput) return;
+
+    fileInput.addEventListener('change', function () {
+        const file = this.files[0];
+        if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.classList.remove('d-none');
+                actions.classList.remove('d-none');
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', function () {
+            fileInput.value = '';
+            preview.src = '';
+            preview.classList.add('d-none');
+            actions.classList.add('d-none');
+        });
+    }
+})();
+</script>
