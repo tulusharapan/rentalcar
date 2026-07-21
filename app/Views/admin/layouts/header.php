@@ -60,7 +60,7 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             overflow: hidden;
             background: var(--admin-sidebar);
             color: #ffffff;
-            padding: 20px 14px;
+            padding: 12px 14px;
             transition: width .2s ease, flex-basis .2s ease, padding .2s ease;
             scrollbar-width: thin;
             scrollbar-color: rgba(255,255,255,.15) transparent;
@@ -256,7 +256,7 @@ $faviconUrl = ! empty($appFavicon) ? base_url('uploads/settings/' . $appFavicon)
             display: flex;
             align-items: center;
             gap: 10px;
-            margin: 14px 0 8px;
+            margin: 0 0 12px;
             padding: 10px;
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.06);
